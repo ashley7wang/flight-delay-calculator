@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Chance My Flight</title>
+</head>
+
+<body>
+    <h1>Chance My Flight</h1>
+    <h2>Delay Calculator: </h2>
+
+    <form method="POST" autocomplete="off" action="{{url_for('delay_calculator')}}" class="d-flex">
+        {{ form.hidden_tag() }}
+
+        <label for="origin">Origin Airport (IATA): </label>
+        <input type="search" name="origin" placeholder="Origin"></input>
+
+        <label for="destination">Destination Airport (IATA): </label>
+        <input type="search" name="destination" placeholder="Destination"></input>
+
+        <button class="btn btn-outline-secondary" type="submit">
+            Calculate Delay
+        </button>
+
+    </form>
+
+    <h2>Airline Recommendation: </h2>
+
+    <form method="POST" autocomplete="off" action="{{url_for('delay_calculator')}}" class="d-flex">
+        {{ form.hidden_tag() }}
+
+        <label for="origin">Origin Airport (IATA): </label>
+        <input type="search" name="origin" placeholder="Origin"></input>
+
+        <label for="destination">Destination Airport (IATA): </label>
+        <input type="search" name="destination" placeholder="Destination"></input>
+
+        <button class="btn btn-outline-secondary" type="submit">
+            Give Airline
+        </button>
+
+    </form>
+
+    <h2>Reviews: </h2>
+    <h3>Search below for a flight review</h3>
+    <form method="POST" action="{{url_for('search')}}" class="d-flex">
+        {{ form.hidden_tag() }}
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" ,
+            name="searched"></input>
+        <button class="btn btn-outline-secondary" type="submit">
+            Search
+        </button>
+    </form>
+    <h3>Add a review</h3>
+
+    <form method="POST" autocomplete="off" action="{{url_for('add_review')}}" class="d-flex">
+        {{ form.hidden_tag() }}
+        <label for="airline">Airline Abbreviation: </label>
+        <input class="form-control me-2" type="search" name="airline" placeholder="Airline"></input>
+
+
+        <label for="review">Review: </label>
+        <input type="search" name="review" placeholder="Review"></input>
+
+        <button class="btn btn-outline-secondary" type="submit">
+            Add Review
+        </button>
+
+    </form>
+    <h3> Delete a Review </h3>
+    <form method="POST" autocomplete="off" action="{{url_for('delete_review')}}" class="d-flex">
+        {{ form.hidden_tag() }}
+        <label for="review number">Review Number: </label>
+        <input class="form-control me-2" type="search" name="review_num" placeholder="Review #"></input>
+        <button class="btn btn-outline-secondary" type="submit">
+            Delete Review
+        </button>
+    </form>
+
+
+    <h3> Update a Review </h3>
+    <form method="POST" autocomplete="off" action="{{url_for('update_review')}}" class="d-flex">
+        {{ form.hidden_tag() }}
+        <label for="review number">Review Number: </label>
+        <input class="form-control me-2" type="search" name="review_num" placeholder="Review #"></input>
+
+        <label for="review">Review: </label>
+        <input type="search" name="review" placeholder="Review"></input>
+
+        <button class="btn btn-outline-secondary" type="submit">
+            Update Review
+        </button>
+    </form>
+
+</body>
+
+</html>

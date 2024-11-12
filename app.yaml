@@ -1,0 +1,13 @@
+runtime: python38
+
+instance_class: F1
+
+env_variables:
+  MYSQL_USER: 'root'
+  MYSQL_PASSWORD: 'flight123'
+  MYSQL_DB: 'Kaggle'
+  MYSQL_HOST: '34.27.44.168'
+
+handlers:
+- url: /css
+  static_dir: static/css

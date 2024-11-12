@@ -1,0 +1,14 @@
+<h2>You Searched For...
+    <span style="color: #ff0000">{{searched}}</span>
+</h2>
+<span style="color: #ff0000">
+    {% for r in rec %}
+    <p>{{r}}</p>
+    {% endfor %}
+</span>
+<h3>Click the back button to return to the home page</h3>
+<a href="/">
+    <form action="/">
+        <input class="btn" type="button" value="Back" />
+    </form>
+</a>

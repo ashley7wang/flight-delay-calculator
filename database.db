@@ -1,0 +1,7 @@
+"INSERT INTO reviews (text, airline_name) VALUES (?,?);"
+
+"UPDATE reviews SET text=? WHERE airline_name=?;", (text, airline_name))
+
+"DELETE FROM reviews WHERE airline_name=?;", airline_name
+
+"SECECT * FROM reviews WHERE airline_name=?;", airline_name

@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(254, 254, 254);
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+    color: rgb(126, 47, 47);
+    text-align: center;
+}
+
+h3 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+input {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
